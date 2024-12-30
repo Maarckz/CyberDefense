@@ -10,13 +10,11 @@
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Font Awesome icons -->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap) -->
+        <link href="css/styles.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap) 
 
 
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>-->
         <script src="js/all.js" crossorigin="anonymous"></script>
         <script src="js/bootstrap.bundle.min.js"></script>
         <script src="js/scripts.js"></script>
@@ -24,39 +22,59 @@
         <script src="js/vanta.net.min.js"></script>
 
         
+        <style>
+    
+        </style>
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 if (window.VANTA) {
                     const container = document.querySelector(".page-section");
-                    VANTA.NET({
-                        el: container, 
-                        mouseControls: true,
-                        touchControls: true,
-                        gyroControls: false,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        scale: 1.50,
-                        scaleMobile: 1.50,
-                        color: 0xff3f3f,
-                        backgroundColor: 0x20202,
-                        points: 15.00,
-                        maxDistance: 16.00,
-                        spacing: 12.00
-                    });
-            
+                    if (window.innerWidth > 768) {
+                        VANTA.NET({
+                            el: container, 
+                            mouseControls: true,
+                            touchControls: true,
+                            gyroControls: false,
+                            minHeight: 50.00,
+                            minWidth: 50.00,
+                            scale: 1.8,
+                            scaleMobile: 1.8,
+                            color: 0xff3f3f,
+                            backgroundColor: 0x20202,
+                            points: 12.00,
+                            maxDistance: 16.00,
+                            spacing: 13.00,
+                            rotate: 45
+                        });
+                    } else {
+                        VANTA.NET({
+                            el: container, 
+                            mouseControls: true,
+                            touchControls: true,
+                            gyroControls: true,
+                            minHeight: 100.00,
+                            minWidth: 100.00,
+                            scale: 1.8,
+                            scaleMobile: 1.8,
+                            color: 0xff3f3f,
+                            backgroundColor: 0x20202,
+                            points: 12.00,
+                            maxDistance: 30.00,
+                            spacing: 15.00,
+                            rotate: 45
+                        });
+                    }
                 }
             });
             </script>
 
-        <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
- 
-        <!-- Portfolio Grid-->
         <section class="page-section bg-light" id="portfolio">
             <div class="container">
                 <div class="text-center">
                     <img class="img-fluid" src="assets/img/CyberDefense.png" alt="..." />
+             
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-4">
