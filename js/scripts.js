@@ -52,3 +52,45 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.VANTA) {
+        const container = document.querySelector(".page-section");
+        if (window.innerWidth > 768) {
+            VANTA.NET({
+                el: container, 
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 50.00,
+                minWidth: 50.00,
+                scale: 1.8,
+                scaleMobile: 1.8,
+                color: 0xff3f3f,
+                backgroundColor: 0x20202,
+                points: 18.00,
+                maxDistance: 16.00,
+                spacing: 10.00,
+                rotate: 45
+            });
+        } else {
+            VANTA.NET({
+                el: container, 
+                mouseControls: false,
+                touchControls: false,
+                gyroControls: false,
+                minHeight: 100.00,
+                minWidth: 100.00,
+                scale: 1.8,
+                scaleMobile: 1.8,
+                color: 0xff3f3f,
+                backgroundColor: 0x20202,
+                points: 12.00,
+                maxDistance: 20.00,
+                spacing: 15.00,
+                rotate: 45
+            });
+        }
+    }
+});
